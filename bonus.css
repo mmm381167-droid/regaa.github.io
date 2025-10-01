@@ -13,6 +13,14 @@ body {
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4, #a18cd1);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  text-align: center;
+  color: #fff;
+  margin: 0;
+  padding: 20px;
 }
 
 @keyframes gradientBG {
