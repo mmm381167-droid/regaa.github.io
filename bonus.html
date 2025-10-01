@@ -7,26 +7,48 @@
   <link rel="stylesheet" href="bonus.css">
 </head>
 <body>
-  <canvas id="fireworks"></canvas>
 
-  <h1>🎉 Сюрприз! 🎉</h1>
-  <p>Ты дошла до бонуса!  
-  Здесь я хочу сказать ещё раз: ты реально классная, и я желаю тебе море счастья, ярких эмоций и самых крутых моментов в этом году 🚀</p>
+  <div class="container">
+    <h1>🎉 Сюрприз! 🎉</h1>
+    <p>Ты дошла до бонуса! Здесь я хочу сказать ещё раз: ты реально классная, и я желаю тебе море счастья, ярких эмоций и самых крутых моментов в этом году 🚀</p>
 
- <div class="carousel">
-    <button class="prev">&#10094;</button>
-    <div class="carousel-track">
-      <img src="img/1p.jpg" alt="фото 1">
-      <img src="img/2p.jpg" alt="фото 2">
-      <img src="img/3p.jpg" alt="фото 3">
-      <img src="img/4p.jpg" alt="фото 4">
-    </div>/
-    <button class="next">&#10095;</button>
+    <div class="carousel">
+      <img id="carousel-image" src="photo1.jpg" alt="Фото 1">
+      <div class="carousel-controls">
+        <button onclick="prevImage()">← Назад</button>
+        <button onclick="nextImage()">Вперёд →</button>
+      </div>
+    </div>
+
+    <p class="hint">Листай фото и смотри воспоминания 💖</p>
+    <a href="story.html" class="memory-btn">⬅ Назад</a>
   </div>
-  <a href="index.html" class="back-btn">⬅ Назад</a>
 
+  <script>
+    // массив с картинками
+    const images = [
+      "photo1.jpg",
+      "photo2.jpg",
+      "photo3.jpg"
+    ];
 
-  <script src="
-  script.js"></script>
+    let currentIndex = 0;
+    const imgElement = document.getElementById("carousel-image");
+
+    function showImage(index) {
+      imgElement.src = images[index];
+      imgElement.alt = "Фото " + (index + 1);
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+    }
+  </script>
 </body>
 </html>
