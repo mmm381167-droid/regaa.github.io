@@ -1,66 +1,97 @@
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #ffd6e7;
+/* базовые правки, чтобы всё было предсказуемо */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #ffd6e7; /* нежный розовый фон */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* центрируем контейнер и даём отступ сверху */
+body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  min-height: 100vh;
-}
-
-.container {
-  width: 90%;              /* контейнер занимает почти весь экран */
-  max-width: 700px;        /* но не больше 700px на больших экранах */
-  background: white;
-  margin: 20px;
   padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
-  box-sizing: border-box;  /* учитываем padding в ширине */
 }
 
+/* контейнер */
+.container {
+  width: 100%;
+  max-width: 720px;    /* не шире 720px на десктопе */
+  background: #ffffff;
+  margin: 20px auto;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.08);
+}
+
+/* заголовок */
 h1 {
-  text-align: center;
   color: #ff4d88;
-  margin-bottom: 20px;
-  font-size: 1.5em;
+  text-align: center;
+  margin: 0 0 14px;
+  font-size: clamp(1.2rem, 3.6vw, 1.8rem); /* адаптивный размер */
 }
 
+/* параграфы — читаемая длина, адаптивный размер шрифта */
 p {
-  font-size: 1.1em;
-  line-height: 1.6;
+  margin: 14px auto;
   color: #333;
-  margin: 15px 0;
+  line-height: 1.6;
+  font-size: clamp(1rem, 2.6vw, 1.05rem);
+  max-width: 60ch;              /* ограничивает ширину строки для удобного чтения */
+  overflow-wrap: break-word;    /* переносит длинные слова */
 }
 
-/* кнопка */
+/* кнопка-ссылка */
 .memory-btn {
   display: inline-block;
-  margin: 20px 0;
-  padding: 12px 25px;
-  background: #ff4d88;
-  color: white;
-  border-radius: 8px;
+  margin: 18px 0;
+  padding: 11px 20px;
+  background: linear-gradient(135deg,#ff6a9a,#ff4d88);
+  color: #fff;
   text-decoration: none;
-  font-size: 1em;
-  transition: background 0.3s;
+  border-radius: 9px;
+  font-weight: 600;
+  font-size: 0.98rem;
+  transition: transform .12s ease, box-shadow .12s ease;
 }
-
 .memory-btn:hover {
-  background: #e60073;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(255,77,136,0.18);
 }
 
-/* 📱 Адаптивность для телефонов */
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.2em;
+/* адаптивные картинки */
+.responsive-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 12px 0;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* мелкие экраны — чуть меньше отступы */
+@media (max-width: 420px) {
+  .container {
+    padding: 16px;
+    margin: 12px;
   }
   p {
-    font-size: 1em;
+    font-size: 0.98rem;
+    max-width: 66ch; /* чуть больше относит. на узком экране ширина контейнера всё равно ограничит */
   }
   .memory-btn {
-    font-size: 0.9em;
-    padding: 10px 20px;
+    padding: 10px 16px;
+    font-size: 0.95rem;
   }
 }
