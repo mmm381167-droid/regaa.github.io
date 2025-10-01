@@ -140,3 +140,56 @@ p {
 .back-btn:hover {
   background: linear-gradient(45deg, #43e97b, #38f9d7);
 }
+
+
+
+
+
+
+.carousel {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+button.prev { left: 10px; }
+button.next { right: 10px; }
+
+button:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
