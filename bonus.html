@@ -7,13 +7,11 @@
   <link rel="stylesheet" href="bonus.css">
 </head>
 <body>
-
   <div class="container">
-    <h1>🎉 Сюрприз! 🎉</h1>
-    <p>Ты дошла до бонуса! Здесь я хочу сказать ещё раз: ты реально классная, и я желаю тебе море счастья, ярких эмоций и самых крутых моментов в этом году 🚀</p>
+    <h1>Фото-карусель 📸</h1>
 
     <div class="carousel">
-      <img id="carousel-image" src="photo1.jpg" alt="Фото 1">
+      <img id="carousel-image" src="photo1.jpg" alt="Фото 1" class="fade">
       <div class="carousel-controls">
         <button onclick="prevImage()">← Назад</button>
         <button onclick="nextImage()">Вперёд →</button>
@@ -25,7 +23,6 @@
   </div>
 
   <script>
-    // массив с картинками
     const images = [
       "img/1p.jpg",
       "img/2p.jpg",
@@ -37,8 +34,12 @@
     const imgElement = document.getElementById("carousel-image");
 
     function showImage(index) {
-      imgElement.src = images[index];
-      imgElement.alt = "Фото " + (index + 1);
+      imgElement.classList.remove("show"); // плавно скрываем
+      setTimeout(() => {
+        imgElement.src = images[index];
+        imgElement.alt = "Фото " + (index + 1);
+        imgElement.classList.add("show"); // плавно показываем
+      }, 300); // задержка соответствует скорости анимации
     }
 
     function nextImage() {
@@ -49,6 +50,11 @@
     function prevImage() {
       currentIndex = (currentIndex - 1 + images.length) % images.length;
       showImage(currentIndex);
+    }
+
+    // при загрузке делаем первое фото видимым
+    window.onload = () => {
+      imgElement.classList.add("show");
     }
   </script>
 </body>
