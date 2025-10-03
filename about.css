@@ -18,7 +18,7 @@ h1 {
   font-size: 3em;
   text-align: center;
   color: white;
-  text-shadow: 0 0 10px rgba(0,0,0,0.3);
+  text-shadow:0 2px 4px rgba(0,0,0,0.25 );
   animation: fadeIn 3s ease-in-out;
 }
 
@@ -29,6 +29,7 @@ p {
   margin-top: 20px;
   max-width: 600px;
   animation: fadeIn 5s ease-in-out;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.25 )
 }
 
 @keyframes fadeIn {
