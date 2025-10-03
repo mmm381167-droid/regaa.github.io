@@ -6,7 +6,7 @@ body {
   align-items: center;
   height: 100vh;
  background: linear-gradient(135deg, #FFA500, #FFC0CB, #FFFACD);
-  font-family: 'Segoe UI', sans-serif;
+ font-family: Arial, sans-serif;
   overflow: hidden;
 color:white ;
 }
