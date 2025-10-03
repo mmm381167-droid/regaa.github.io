@@ -56,82 +56,30 @@ p {
   overflow-wrap: break-word;    /* переносит длинные слова */
 }
 
-/* кнопка-ссылка */
-.memory-btn {
+.memory-btn{
   display: inline-block;
-  margin: 18px 0;
-  padding: 11px 20px;
-  background-image: url(333.jpg);
-  background-size: cover;
-  color: #fff;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #ff6a9a, #ff4d88);
+  color: white;
   text-decoration: none;
-  border-radius: 9px;
-  font-weight: 600;
-  font-size: 0.98rem;
-  transition: transform .12s ease, box-shadow .12s ease;
-}
-.memory-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 18px rgba(255,77,136,0.18);
+  border-radius: 15px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.25 );
 }
 
-/* адаптивные картинки */
-.responsive-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 12px 0;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-/* мелкие экраны — чуть меньше отступы */
-@media (max-width: 420px) {
-  .container {
-    padding: 16px;
-    margin: 12px;
-  }
-  p {
-    font-size: 0.98rem;
-    max-width: 66ch; /* чуть больше относит. на узком экране ширина контейнера всё равно ограничит */
-  }
-  .memory-btn {
-    padding: 10px 16px;
-    font-size: 0.95rem;
-  }
-/* Базовый стиль обычной кнопки */
-.memory-btn {
+#img {
   display: inline-block;
-  margin: 18px 0;
-  padding: 12px 20px;
-  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 15px;
   text-decoration: none;
-  border-radius: 8px;
-  font-size: 1rem;
+  color: white;
+  font-weight: bold;
   text-align: center;
-  transition: transform .12s ease, box-shadow .12s ease;
-}
-
-/* Кнопка с текстурой травы */
-.grass-btn {
-  background-image: url("img/333.jpg"); /* твоя картинка блока */
-  background-size: cover;             /* картинка заполняет кнопку */
+  background-image: url(img/888.png);
+  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  color: #fff;                        /* цвет текста */
-  text-shadow: 0 1px 2px rgba(0,0,0,0.8); /* чтобы текст не терялся на фоне */
-  border: 2px solid #3a3a3a;          /* рамка для "кубичности" */
-  box-shadow: 0 4px 0 #2a2a2a, 0 6px 12px rgba(0,0,0,0.2);
+  transition: transform 0.2;
 }
 
-/* Hover эффект */
-.grass-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 0 #2a2a2a, 0 10px 16px rgba(0,0,0,0.25);
-}
-
-/* Active (нажатие) */
-.grass-btn:active {
-  transform: translateY(1px);
-  box-shadow: 0 2px 0 #2a2a2a, 0 4px 8px rgba(0,0,0,0.2);
+#img:hover {
+  transition: scale(1.05);
 }
