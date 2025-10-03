@@ -13,6 +13,10 @@ html, body {
   background: linear-gradient(135deg, #FFA500, #FFC0CB, #FFFACD); /* нежный розовый фон */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+   background-attachment: fixed; /* фон зафиксирован */
+  background-repeat: no-repeat;
+  background-size: cover; /* фон покрывает всю страницу */
+  overflow-x: hidden; 
 }
 
 /* центрируем контейнер и даём отступ сверху */

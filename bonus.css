@@ -7,6 +7,10 @@ body {
   justify-content: center;
   align-items: flex-start;
   min-height: 100vh;
+   background-attachment: fixed; /* фон зафиксирован */
+  background-repeat: no-repeat;
+  background-size: cover; /* фон покрывает всю страницу */
+  overflow-x: hidden; 
 }
 
 .container {
