@@ -57,7 +57,8 @@ p {
   display: inline-block;
   margin: 18px 0;
   padding: 11px 20px;
-  background: linear-gradient(135deg,#ff6a9a,#ff4d88);
+  background-image: url(333.jpg);
+  background-size: cover;
   color: #fff;
   text-decoration: none;
   border-radius: 9px;
@@ -109,7 +110,7 @@ p {
 
 /* Кнопка с текстурой травы */
 .grass-btn {
-  background-image: url("img/666.png"); /* твоя картинка блока */
+  background-image: url("img/333.jpg"); /* твоя картинка блока */
   background-size: cover;             /* картинка заполняет кнопку */
   background-position: center;
   background-repeat: no-repeat;
