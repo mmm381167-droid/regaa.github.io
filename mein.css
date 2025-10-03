@@ -45,11 +45,11 @@ body {
 }
 
 .door.left {
-  background-image: url("img/pig.jpg");
+  background-image: url("img/pig.png");
 }
 
 .door.right {
-  background-image: url("img/fog.jpg");
+  background-image: url("img/fog.png");
 }
 
 .doors.open .left {
