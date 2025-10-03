@@ -50,6 +50,7 @@ p {
   cursor: pointer;
   font-size: 0.9em;
   transition: 0.3s;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.25 );
 }
 
 .button-secret:hover {
