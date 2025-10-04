@@ -38,3 +38,18 @@ body {
   background: url("img/993.png") center/cover no-repeat;
   opacity: 0.9; /* прозрачность звёзд (0 = невидимые, 1 = полностью яркие) */
 [  ] }
+
+
+.img {
+	display: inline-block;
+  padding: 12px 24px;
+  border-radius: 15px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  background-image: url(img/888.png);
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.2;
+}
