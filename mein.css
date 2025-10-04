@@ -35,6 +35,6 @@ body {
   height: 100%;
   pointer-events: none;
   z-index: 9999;
-  background: url("img/666.png") center/cover no-repeat;
+  background: url("img/123.png") center/cover no-repeat;
   opacity: 0.3; /* прозрачность звёзд (0 = невидимые, 1 = полностью яркие) */
 [  ] }
