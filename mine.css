@@ -1,0 +1,11 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-image: url(img/Mine.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	text-align: center;
+	background-attachment: fixed;
+	overflow-x: hidden;
+}
