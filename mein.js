@@ -1,4 +1,4 @@
-const link = document.getElementById('myLink');
+const link = document.querySelector('.myLink');
 const sound = document.getElementById('clickSound');
 
 link.addEventListener('click', (event) => {
