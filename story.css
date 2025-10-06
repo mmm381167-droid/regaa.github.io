@@ -1,4 +1,4 @@
-/* базовые правки, чтобы всё было предсказуемо */
+
 *,
 *::before,
 *::after {
@@ -10,7 +10,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #FFA500, #FFC0CB, #FFFACD); /* нежный розовый фон */
+  background: linear-gradient(135deg, #FFA500, #FFC0CB, #FFFACD); 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
    background-attachment: fixed; /* фон зафиксирован */
@@ -19,7 +19,6 @@ html, body {
   overflow-x: hidden; 
 }
 
-/* центрируем контейнер и даём отступ сверху */
 body {
   display: flex;
   justify-content: center;
@@ -27,7 +26,7 @@ body {
   padding: 20px;
 }
 
-/* контейнер */
+
 .container {
   width: 100%;
   max-width: 720px;    /* не шире 720px на десктопе */
@@ -38,7 +37,6 @@ body {
   box-shadow: 0 8px 26px rgba(0,0,0,0.08);
 }
 
-/* заголовок */
 h1 {
   color: #ff4d88;
   text-align: center;
@@ -46,7 +44,6 @@ h1 {
   font-size: clamp(1.2rem, 3.6vw, 1.8rem); /* адаптивный размер */
 }
 
-/* параграфы — читаемая длина, адаптивный размер шрифта */
 p {
   margin: 14px auto;
   color: #333;

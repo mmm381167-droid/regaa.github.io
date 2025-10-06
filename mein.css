@@ -36,7 +36,7 @@ body {
   pointer-events: none;
   z-index: 9999;
   background: url("img/993.png") center/cover no-repeat;
-  opacity: 0.9; /* прозрачность звёзд (0 = невидимые, 1 = полностью яркие) */
+  opacity: 0.9;
 [  ] }
 
 
@@ -48,25 +48,4 @@ display: inline-block;
   text-decoration: none;
   border-radius: 15px;
   text-shadow: 0 2px 4px rgba(0,0,0,0.25 );
-}
-
-p {
-	text-shadow:  0 2px 4px rgba(0,0,0,0.40 );
-}
-
-
-@keyframes slideDown {
-
-	0% {opacity: 0;
-		transform: translateY(-40px);
-	}
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
-
-.animate-down {
-	opacity: 0;
-	animation: slideDown 0.8 ease-out forwards;
 }
